@@ -1,26 +1,38 @@
 import React, { useEffect, useState } from "react";
 
-// Описание типа узла JSON-структуры
 type Node = {
   tag: string;
   attrs?: Record<string, string>;
   children?: Array<Node | string>;
 };
 
-// Рекурсивная функция для создания React-элементов
-const createElement = (node: Node | string): React.ReactNode => {
+const createElement = (node: Node | string, key?: number): React.ReactNode => {
   if (typeof node === "string") {
-    return node; // Текстовый узел
+    return node;
   }
 
   const { tag, attrs, children } = node;
 
+  // Void elements (элементы без дочерних элементов)
+  const voidElements = ["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"];
+
+  // Преобразование атрибутов (замена `class` на `className`)
+  const processedAttrs = { ...attrs, className: attrs?.class, class: undefined };
+
+  // Для void-элементов не добавляем children
+  if (voidElements.includes(tag)) {
+    return React.createElement(tag, { ...processedAttrs, key });
+  }
+
+  // Для всех остальных элементов создаем с children
   return React.createElement(
     tag,
-    attrs,
-    children && children.map((child, index) => createElement(child))
+    { ...processedAttrs, key },
+    children?.map((child, index) => createElement(child, index))
   );
 };
+
+
 
 type RendererProps = {
   jsonPath: string;
@@ -30,23 +42,16 @@ const Renderer: React.FC<RendererProps> = ({ jsonPath }) => {
   const [tree, setTree] = useState<Node | null>(null);
 
   useEffect(() => {
-    console.log("useEffect сработал"); // Диагностика
     fetch(jsonPath)
       .then((response) => {
-        console.log("Ответ сервера:", response);
         if (!response.ok) {
           throw new Error(`HTTP ошибка! Статус: ${response.status}`);
         }
         return response.json();
       })
-      .then((data) => {
-        console.log("Загруженная структура JSON:", data);
-        setTree(data);
-      })
-      .catch((error) => {
-        console.error("Ошибка загрузки JSON:", error);
-      });
-  }, [jsonPath]);  
+      .then((data) => setTree(data))
+      .catch((error) => console.error("Ошибка загрузки JSON:", error));
+  }, [jsonPath]);
 
   return <>{tree ? createElement(tree) : <p>Загрузка...</p>}</>;
 };
