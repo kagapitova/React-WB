@@ -1,9 +1,9 @@
-import Renderer from "./Renderer";
+import { Inventory } from "./Inventory";
 
 const App = () => (
   <div className="App">
-    <h1>Проверка рендеринга</h1>
-    <Renderer jsonPath="component.json" />
+     <Inventory jsonFile="inventory1.json" />
+     <Inventory jsonFile="inventory2.json" />
   </div>
 );
 
