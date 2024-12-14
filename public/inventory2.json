@@ -1,7 +1,0 @@
-{
-    "items": [
-        { "type": "potion", "rarity": "common", "x": 3, "y": 3, "width": 1, "height": 2 },
-        { "type": "weapon", "rarity": "epic", "x": 5, "y": 0, "width": 3, "height": 1 },
-        { "type": "equipment", "rarity": "rare", "x": 4, "y": 4, "width": 2, "height": 2 }
-    ]
-}
