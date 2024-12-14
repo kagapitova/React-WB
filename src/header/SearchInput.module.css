@@ -1,0 +1,29 @@
+.searchContainer {
+    display: flex;
+    padding: 13px 12px 15px 12px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 0px 0px 16px 16px;
+    background: #F2F7F7;
+}
+
+.input {
+    border: none;
+    background-color: transparent;
+    font-feature-settings: 'case' on, 'cpsp' on, 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'calt' off;
+    font-family: "Inter Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 412;
+    line-height: 100%;
+}
+
+.input::placeholder {
+    color: #BCCDD1;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}

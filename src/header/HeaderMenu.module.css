@@ -1,0 +1,7 @@
+.menu {
+    display: flex;
+    padding: 13px 0px;
+    align-items: center;
+    gap: 16px;
+    flex-direction: row;
+}
