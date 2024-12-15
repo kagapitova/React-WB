@@ -1,9 +1,12 @@
 import Header from "./header/Header";
+import styles from './App.module.css';
 import './reset.css';
+import Banner from "./banner/Banner";
 
 const App = () => (
-  <div className="App">
+  <div className={styles.app}>
     <Header />
+    <Banner />
   </div>
 );
 

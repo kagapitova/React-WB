@@ -1,0 +1,9 @@
+.banner {
+    src: "/assets/jpg/Banner-desktop.jpg"
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        src: "/assets/jpg/Banner-mobile.jpg"
+    }
+}
