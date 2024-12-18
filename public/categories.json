@@ -1,0 +1,70 @@
+{
+    "categories": [
+      {
+        "url": "/psychology-help",
+        "title": "Помощь психолога",
+        "src": "public/assets/png/psyho.png"
+      },
+      {
+        "url": "/gadgets",
+        "title": "Гаджеты",
+        "src": "public/assets/png/gadget.png"
+      },
+      {
+        "url": "/art-items",
+        "title": "Предметы искусства",
+        "src": "public/assets/png/art.png"
+      },
+      {
+        "url": "/home-goods",
+        "title": "Товары для дома",
+        "src": "public/assets/png/home.png"
+      },
+      {
+        "url": "/talents",
+        "title": "Таланты",
+        "src": "public/assets/png/talant.png"
+      },
+      {
+        "url": "/magic",
+        "title": "Магия",
+        "src": "public/assets/png/magic.png"
+      },
+      {
+        "url": "/relax",
+        "title": "Релакс",
+        "src": "public/assets/png/relax.png"
+      },
+      {
+        "url": "/entertainment",
+        "title": "Развлечения",
+        "src": "public/assets/png/entertainment.png"
+      },
+      {
+        "url": "/treasures",
+        "title": "Сокровища",
+        "src": "public/assets/png/treasures.png"
+      },
+      {
+        "url": "/real-estate",
+        "title": "Недвижимость",
+        "src": "public/assets/png/imot.png"
+      },
+      {
+        "url": "/beauty-health",
+        "title": "Красота и здоровье",
+        "src": "public/assets/png/health.png"
+      },
+      {
+        "url": "/power",
+        "title": "Могущество",
+        "src": "public/assets/png/power.png"
+      },
+      {
+        "url": "/style",
+        "title": "Стиль",
+        "src": "public/assets/png/style.png"
+      }
+    ]
+  }
+  
