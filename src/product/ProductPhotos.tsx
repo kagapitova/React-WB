@@ -1,28 +1,40 @@
-const ProductPhotos = ({ product }) => {
-  const { cardType, image } = product;
+import React from 'react';
+import { Product } from './ProductCard';
+import styles from './ProductPhotos.module.css';
 
-  if (!image) {
+type ProductPhotosProps = {
+  product: Product;
+};
+
+const ProductPhotos: React.FC<ProductPhotosProps> = ({ product }) => {
+  const { cardType, src } = product;
+
+  if (!src) {
     return (
-      <div className="product-photos product-photos--default">
+      <div className={styles.productPhotosDefault}>
         <p>No image available</p>
       </div>
     );
   }
 
   const renderImages = () => {
-    const count = parseInt(cardType, 10) || 1;
+    const count = cardType || 1;
 
     return Array.from({ length: count }, (_, index) => (
       <img
         key={index}
-        src={image}
+        src={src}
         alt={`Product ${index + 1}`}
-        className="product-photo__image"
+        className={`${styles.productPhotoImage} ${styles[`productPhotoImage--${cardType}`]}`}
       />
     ));
   };
 
-  return <div className={`product-photos product-photos--${cardType}`}>{renderImages()}</div>;
+  return (
+    <div className={`${styles.productPhotos} ${styles[`productPhotos--${cardType}`]}`}>
+      {renderImages()}
+    </div>
+  );
 };
 
 export default ProductPhotos;
