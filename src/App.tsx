@@ -4,6 +4,7 @@ import './reset.css';
 import Banner from "./banner/Banner";
 import Menu from "./menu/Menu";
 import ProductList from "./product/ProductCard";
+import Footer from "./Footer/Footer";
 
 const App = () => (
   <div className={styles.app}>
@@ -11,6 +12,7 @@ const App = () => (
     <Banner />
     <Menu />
     <ProductList />
+    <Footer />
   </div>
 );
 

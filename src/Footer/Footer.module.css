@@ -1,0 +1,26 @@
+.footer {
+    background-color: #F2F7F7;
+    height: 76px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 16px;
+}
+
+.text {
+    color: #BCCDD1;
+    font-size: 22px;
+    font-weight: 550;
+    line-height: 100%;
+    margin-right: 28px;
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    display: flex;
+    gap: 16px;
+}
