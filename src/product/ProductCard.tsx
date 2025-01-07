@@ -26,21 +26,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <ProductPhotos product={product} />
       <div className={styles.productCardInfo}>
         <div className={styles.productCardDetails}>
-          <div>
+          <div className={styles.header}>
               <h3 className={styles.title}>{product.title}</h3>
-              <div></div>
+              <div className={styles.fav}>
+                <img src="public/assets/png/fav.png" alt="fav" />
+              </div>
           </div>
           <p className={styles.description}>Три в одном! Человеческая рука будет массажером, постоянным спутником<br/>и домашним питомцем. Вещь — это отрубленная кисть правой руки, способная свободно передвигаться по дому и за его пределами на кончиках пальцев, как паук.",</p>
         </div>
         <div className={styles.productCardControl}>
-          <div>
-              <h3>{product.price}</h3>
-              <div>
-                  <p>{product.rate}</p>
-                  <p>{product.favorite}</p>
+          <div className={styles.productInfo}>
+              <h3 className={styles.price}>{product.price}</h3>
+              <div className={styles.stat}>
+                  <p>{product.rate}<img src="public/assets/png/star.png" alt="fav" /></p>
+                  <p>{product.favorite}<img src="public/assets/png/like.png" alt="fav" /></p>
               </div>
           </div>
-          <p>"В корзину"</p>
+          <p className={styles.cartBtn}>В корзину</p>
         </div>
       </div>
     </div>

@@ -1,21 +1,65 @@
 .productCard {
   max-width: 1400px;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.fav {
+
+}
+
+.price {
+  text-align: center;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%
+}
+
+.cartBtn {
+  display: flex;
+  height: 54px;
+  padding: 14px 24px 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #F94233;
+  color: white;
+}
   
 .productCardDetails {
   width: 80%;
 }
 
 .productCardControl {
-/* стили для блока управления карточки товара */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .productList {
-    display: flex;
-    padding: 60px 4px 0 4px;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px
+  display: flex;
+  padding: 60px 4px 0 4px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .productCardInfo {

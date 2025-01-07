@@ -21,17 +21,23 @@ const ProductPhotos: React.FC<ProductPhotosProps> = ({ product }) => {
     const count = cardType || 1;
 
     return Array.from({ length: count }, (_, index) => (
-      <img
+      <div
         key={index}
-        src={src}
-        alt={`Product ${index + 1}`}
-        className={`${styles.productPhotoImage} ${styles[`productPhotoImage--${cardType}`]}`}
-      />
+        className={`${styles[`container--${cardType}`]}`}
+      >
+        <img
+          src={src}
+          alt={`Product ${index + 1}`}
+          className={styles.productPhotoImage}
+        />
+      </div>
     ));
   };
 
   return (
-    <div className={`${styles.productPhotos} ${styles[`productPhotos--${cardType}`]}`}>
+    <div className={styles.productPhotos}>
+      <img className={styles.sale} src="public/assets/png/sale.png" alt="sale" />
+      <img className={styles.sale1} src="public/assets/png/sale2.png" alt="sale" />
       {renderImages()}
     </div>
   );
