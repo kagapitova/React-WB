@@ -6,12 +6,20 @@
     flex-direction: row;
 
     @media (max-width: 1024px) {
-        display: none;
+        width: 100%;
+        background: white;
+        justify-content: space-around;
     }
 }
 
 .nav {
     @media (max-width: 1024px) {
-        display: none;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: white;
+        z-index: 11;
+        height: 64px;
     }
 }

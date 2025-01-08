@@ -26,6 +26,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <ProductPhotos product={product} />
       <div className={styles.productCardInfo}>
         <div className={styles.productCardDetails}>
+          <div className={styles.productCardControlMob}>
+              <h3 className={styles.price}>{product.price}</h3>
+              <div className={styles.stat}>
+                  <p>{product.rate}<img src="public/assets/png/star.png" alt="fav" /></p>
+                  <p>{product.favorite}<img src="public/assets/png/like.png" alt="fav" /></p>
+              </div>
+          </div>
           <div className={styles.header}>
               <h3 className={styles.title}>{product.title}</h3>
               <div className={styles.fav}>
@@ -43,6 +50,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </div>
           </div>
           <p className={styles.cartBtn}>В корзину</p>
+        </div>
+        <div className={styles.productCardControlMob}>
+          <p className={styles.cartBtn}>В корзину</p>
+          <img src="public/assets/icons/favMob.svg" alt="fav" />
         </div>
       </div>
     </div>
