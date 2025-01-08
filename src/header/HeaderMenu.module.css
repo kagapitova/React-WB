@@ -4,4 +4,14 @@
     align-items: center;
     gap: 16px;
     flex-direction: row;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.nav {
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }

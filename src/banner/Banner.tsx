@@ -1,10 +1,13 @@
 import React from 'react';
-import styles from './Banner.module.css';
 
 const Banner: React.FC = () => {
   return (
    <div>
-    <img src="/assets/jpg/Banner-desktop.jpg" alt="Banner" className={styles.banner} />
+    <picture>
+        <source media="(max-width: 1024px)" srcSet="/assets/jpg/Banner-mobile.jpg" />
+        <source media="(min-width: 1024px)" srcSet="/assets/jpg/Banner-desktop.jpg" />
+        <img src="/assets/jpg/Banner-desktop.jpg" alt="Banner" />
+      </picture>
    </div>
   );
 };

@@ -6,6 +6,10 @@
     flex: 1 0 0;
     border-radius: 0px 0px 16px 16px;
     background: #F2F7F7;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .input {

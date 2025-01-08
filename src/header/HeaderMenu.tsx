@@ -3,7 +3,7 @@ import styles from './HeaderMenu.module.css';
 
 const HeaderMenu: React.FC = () => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li>
           <a href="#basket">
